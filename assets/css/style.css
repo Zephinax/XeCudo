@@ -9,7 +9,8 @@
 }
 
 :root {
-  --main-color: rgb(91, 111, 175);
+  --main-color: hsl(226, 34%, 52%);
+  --second-color: hsl(226, 40%, 60%);
 }
 
 body {
@@ -19,6 +20,9 @@ body {
   background: hsl(256, 100%, 5%);
   font: 30px sans-serif;
   overflow: hidden;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 canvas {
   position: absolute;
@@ -41,8 +45,8 @@ canvas {
 }
 
 .navlogo {
-  height: 50px;
-  width: 130px;
+  height: 45px;
+  width: 125px;
 }
 
 .navlogo img {
@@ -59,9 +63,19 @@ canvas {
 }
 
 .navLinks li a {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--main-color);
   font-family: Vazir;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px;
+  transition: all 0.15s ease;
+}
+
+.navLinks li a:hover {
+  transform: scale(1.1);
+  color: var(--second-color);
 }
 
 .home {
@@ -70,7 +84,7 @@ canvas {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -83,4 +97,51 @@ canvas {
 .homeImg img {
   height: 100%;
   width: 100%;
+}
+
+.homeContent {
+  position: absolute;
+  font-size: 1.8rem;
+  text-shadow: 2px 2px #000000;
+  color: var(--main-color);
+  font-family: Vazir;
+  margin-bottom: 130px;
+}
+
+.btn {
+  cursor: pointer;
+  position: absolute;
+  font-family: Vazir;
+  display: flex;
+  font-size: 1.5rem;
+  align-items: center;
+  direction: rtl;
+  color: var(--main-color);
+  background: rgba(40, 40, 40, 0.17);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 2px solid var(--main-color);
+  padding: 3px 10px;
+  transition: all 0.15s ease;
+}
+
+.btn:hover {
+  color: var(--second-color);
+}
+
+.cp {
+  z-index: 1;
+  position: absolute;
+  color: red;
+  bottom: 5px;
+  left: 45%;
+  font-size: 0.8rem;
+
+  color: hsl(0, 0%, 68%);
+}
+
+.cp a {
+  color: hsl(342, 61%, 55%);
 }

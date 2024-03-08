@@ -1,0 +1,86 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --main-color: rgb(91, 111, 175);
+}
+
+body {
+  font-family: Vazir;
+  padding: 0;
+  margin: 0;
+  background: hsl(256, 100%, 5%);
+  font: 30px sans-serif;
+  overflow: hidden;
+}
+canvas {
+  position: absolute;
+}
+
+.container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.navContainer {
+  width: 100%;
+  z-index: 1;
+  padding: 20px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navlogo {
+  height: 50px;
+  width: 130px;
+}
+
+.navlogo img {
+  height: 100%;
+  width: 100%;
+}
+
+.navLinks {
+  direction: rtl;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.navLinks li a {
+  font-size: 1.5rem;
+  color: var(--main-color);
+  font-family: Vazir;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.homeImg {
+  height: 700px;
+  width: 750px;
+}
+
+.homeImg img {
+  height: 100%;
+  width: 100%;
+}

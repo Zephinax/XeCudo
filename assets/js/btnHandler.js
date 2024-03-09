@@ -15,3 +15,14 @@ function handler() {
     window.location.replace('./../../soon.html');
   }
 }
+
+function menu(x) {
+  x.classList.toggle('change');
+  let nav = document.getElementById('navbar');
+  if (x.classList.contains('change')) {
+    nav.style.display = 'flex';
+    nav.classList.add('navAnimation');
+  } else {
+    nav.style.display = 'none';
+  }
+}

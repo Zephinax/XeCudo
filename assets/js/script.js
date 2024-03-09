@@ -48,15 +48,6 @@ window.addEventListener(
     );
 
     document.addEventListener(
-      'touchmove',
-      (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-      },
-      false
-    );
-
-    document.addEventListener(
       'mousedown',
       (e) => {
         targetSpeed = BOOST_SPEED;

@@ -48,7 +48,7 @@ window.addEventListener(
     );
 
     document.addEventListener(
-      'ontouchmove',
+      'touchmove',
       (e) => {
         mouseX = e.clientX;
         mouseY = e.clientY;
@@ -65,7 +65,7 @@ window.addEventListener(
     );
 
     document.addEventListener(
-      'ontouchstart',
+      'touchstart',
       (e) => {
         targetSpeed = BOOST_SPEED;
       },
@@ -81,7 +81,7 @@ window.addEventListener(
     );
 
     document.addEventListener(
-      'ontouchend',
+      'touchend',
       (d) => {
         targetSpeed = DEFAULT_SPEED;
       },

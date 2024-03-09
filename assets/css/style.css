@@ -20,9 +20,10 @@ body {
   background: hsl(256, 100%, 5%);
   font: 30px sans-serif;
   overflow: hidden;
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 canvas {
   position: absolute;

@@ -13,14 +13,17 @@ var speed = DEFAULT_SPEED;
 var targetSpeed = DEFAULT_SPEED;
 var particles = [];
 
+const viewportWidth = window.innerWidth;
+const viewportHeight = window.innerHeight;
+
 window.addEventListener(
   'load',
   function () {
     canvas = document.getElementById('c');
 
     var resize = function () {
-      canvasWidth = canvas.width = window.innerWidth;
-      canvasHeight = canvas.height = window.innerHeight;
+      canvasWidth = canvas.width = viewportWidth;
+      canvasHeight = canvas.height = viewportHeight;
       centerX = canvasWidth * 0.5;
       centerY = canvasHeight * 0.5;
       context = canvas.getContext('2d');
@@ -41,8 +44,10 @@ window.addEventListener(
     document.addEventListener(
       'mousemove',
       (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
+        if (viewportWidth > viewportHeight) {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+        }
       },
       false
     );
